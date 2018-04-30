@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>审核服务_共创宇建筑设计交易平台</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="ALCHEMIST Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+<link href="css/style.css" rel='stylesheet' type='text/css' />
+<link href="css/reset.css" rel="stylesheet" type="text/css"/>
+<link href="css/public.css" rel="stylesheet" type="text/css"/>
+<link href="css/master.css" rel="stylesheet" type="text/css"/>
+<link href="css/layer.css" rel="stylesheet" type="text/css"/>
+<script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/jquery.superslide.2.1.1.js"></script>
+<script type="text/javascript" src="js/layer.js"></script>
+<link rel="stylesheet" href="http://www.shigevv.com/js/../css/layer.css?v=3.0.11110" id="layuicss-skinlayercss">
+<script type="text/javascript" src="js/jquery.date_input.pack.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/jquery-html5Validate.js"></script>
+<script src="js/jquery-1.11.0.min.js"></script>
+<link href='http://fonts.useso.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+<!--Start-smoth-scrolling-->
+		<script type="text/javascript" src="js/move-top.js"></script>
+		<script type="text/javascript" src="js/easing.js"></script>
+		<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){
+					event.preventDefault();
+					$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+				});
+			});
+		</script>
+<!--end-smoth-scrolling-->
+<!--start-top-nav-script-->
+		<script>
+			$(function() {
+				var pull 		= $('#pull');
+					menu 		= $('nav ul');
+					menuHeight	= menu.height();
+				$(pull).on('click', function(e) {
+					e.preventDefault();
+					menu.slideToggle();
+				});
+				$(window).resize(function(){
+	        		var w = $(window).width();
+	        		if(w > 320 && menu.is(':hidden')) {
+	        			menu.removeAttr('style');
+	        		}
+	    		});
+			});
+		</script>
+<!--End-top-nav-script-->
+<!--light-box-files -->
+		<script src="js/jquery.chocolat.js"></script>
+		<link rel="stylesheet" href="css/chocolat.css" type="text/css" media="screen" charset="utf-8" />
+		<!--light-box-files -->
+		<script type="text/javascript" charset="utf-8">
+		$(function() {
+			$('#example1 a').Chocolat();
+		});
+		</script>
+</head>
+<body>
+	<!--start-header-->
+	<div class="header" id="home">
+		<div class="container">
+			<div class="logo">
+				<a href="index.html"><img src="images/logo.png" alt=""></a>
+			</div>
+			<div class="quote">
+				<a href="quote.html">帮助中心</a>
+			</div>
+			<!--start-top-nav-->
+			<nav class="top-nav">
+				<ul class="top-nav">
+					<li><a href="index.html"  class="active">首页</a></li>
+					<li><a href="about.html">网站服务</a></li>
+					<li><a href="404.html">个人中心</a></li>
+					<li><a href="contact.html">联系我们</a></li>
+				</ul>
+					<a href="#" id="pull"><img src="images/menu-icon.png" title="menu" /></a>
+			</nav>
+			<div class="clearfix"> </div>
+		</div>
+	</div>
+	<!--end-header-->
+<!--biaoji-->
+<script src="js/echarts.js"></script>
+<script src="js/china.js"></script>
+<!--biaoji end-->
+<style>
+    .scontent .ditu{ height: auto;margin-top: 0; position: relative;}
+    #china-map{ width: 800px;height: 600px; }
+    #mapList{
+        position: absolute;
+        right: 100px;
+        top: 235px;
+        padding: 10px 0;
+    	width:240px;
+        border: 1px solid #e7e7e7;
+        -webkit-box-shadow: 0px 0px 9px -2px rgba(0,0,0,0.32);
+        -moz-box-shadow: 0px 0px 9px -2px rgba(0,0,0,0.32);
+        box-shadow: 0px 0px 9px -2px rgba(0,0,0,0.32);
+        margin-bottom: 18px;
+    	background:#eee;
+    }
+    #partners{max-height: 405px; overflow: auto;padding:10px 14px 0;}
+	#partners::-webkit-scrollbar{width:5px;}
+	#partners::-webkit-scrollbar-track {background-color: #ddd;}
+	#partners::-webkit-scrollbar-thumb {background-color: rgba(0, 0, 0, 0.4);}
+    #mapList a{
+        display: block;
+        width: 100%;
+        height: 30px;
+        line-height: 30px;
+    	font-size:12px;
+    	overflow: hidden;
+    }
+    #mapList p.name{ font-size: 16px;padding-left:14px; color: #fff;height: 24px;line-height: 24px;background:#888;}
+    #partners a:hover{color:#ebc167}
+    .sss .asd{text-decoration: underline;}
+    .fen{width:85px;text-align:right;padding-right:20px;border:1px solid #eee;}
+    ::-webkit-input-placeholder {color: #ddd;}
+</style>
+<!--end-->
+<div class="jrfw">
+    <div class="indexwarpper">
+        <div class="containt">
+            <div class="scontent">
+                <div class="state">
+                    <p style="text-align:justify;">
+	<br>
+</p>
+<p class="title" style="text-align: center; margin-top: 0px; margin-bottom: 12px; padding: 0px; border: 0px; outline: 0px; font-size: 16px; vertical-align: baseline; background: rgb(255, 255, 255); color: rgb(102, 102, 102); font-weight: bold;" white-space:normal;"="">
+				<img src="images/20171024040419_38741.jpg" alt="">
+	</p>
+<span style="line-height:2;font-size:14px;color:#666666;">
+<p style="margin-top:0px;margin-bottom:0px;white-space:normal;padding:0px;border:0px;outline:0px;vertical-align:baseline;background-image:initial;background-position:initial;background-size:initial;background-repeat:initial;background-attachment:initial;background-origin:initial;background-clip:initial;line-height:30px;">
+	<br>
+</p>
+</span>                </div>
+                <div class="con-list">
+                    <div class="btns" style="text-align: center;">
+                        <a download="standard" href="/Uploads/auth/201708/15027901365992c1f9b4a31.pdf">标准下载</a>
+                        <a href="/Authen/involvedWeaving.html" style="margin-right: 0;">参与众编</a>
+                    </div>
+                    <div class="img">
+                        <img src="images/20170925072019_13363.jpg" alt="">                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="containt">
+            <div class="scontent">
+				<div class="ditu clearfix">
+                    <div id="china-map" _echarts_instance_="ec_1520827970034" style="-webkit-user-select: none; position: relative; background-color: transparent; background-position: initial initial; background-repeat: initial initial;"><div style="position: relative; overflow: hidden; width: 800px; height: 600px; padding: 0px; margin: 0px; border-width: 0px; cursor: default;"><canvas width="1600" height="1200" data-zr-dom-id="zr_0" style="position: absolute; left: 0px; top: 0px; width: 800px; height: 600px; -webkit-user-select: none; padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div></div></div>
+                    <div id="mapList">
+                        <p class="name">四川合作单位：</p>
+                        <div id="partners"><a href="/Authen/partner/id/4">四川省建筑设计研究院-BIM设计所</a><a href="/Authen/partner/id/15">四川柏慕联创工程技术服务有限公司</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="containt">
+       		<p class="title" style="text-align: center; margin-top: 0px; margin-bottom: 12px; padding: 0px; border: 0px; outline: 0px; font-size: 16px; vertical-align: baseline; background: rgb(255, 255, 255); color: rgb(102, 102, 102); font-weight: bold;" white-space:normal;"="">
+				<img src="images/20170926072157_74331.jpg" alt="">
+	</p>
+ </div>
+    </div>
+</div>
+
+<!--start-touch-->
+<div class="touch">
+	<div class="container">
+	<div class="touch-main">
+		<div class="col-md-4 touch-left">
+			<h3>联系我们</h3>
+			<p>四川省成都市武侯区四川大学望江校区</p>
+			<p>电话:15828151823</p><p>
+			</p><p>E-mail:<a href="mailto:example@email.com">396256752@qq.com</a>
+				</p>
+		</div>
+		<div class="col-md-4 touch-left">
+			<h3>@微信公众号</h3>
+			<p>打开微信就能体验共创宇建筑移动端服务了！                      立即订阅，您将第一时间了解最新资讯！</p>
+			<label>about 2 days ago</label>
+		</div>
+		<div class="col-md-4 touch-right">
+		<img src="images/2demensioncode.png" alt="">
+		</div>
+		<div class="clearfix"></div>
+	</div>
+</div>
+</div>
+<!--end-touch-->
+<!--start-footer-->
+<div class="footer">
+	<div class="container">
+		<div class="footer-text">
+			<p>关于我们 ©CO Architecture共创宇建筑设计  蜀ICP备xxxxxxxx号-1   公网安备100000000号  站长统计</p>
+			<a href="#home" class="scroll"><img src="images/top-img.png" alt=""></a>
+		</div>
+	</div>
+</div>
+<!--End-footer-->
+<script>
+function changeCheckService(){
+    var v2 = new Array();
+    $('.l').each(function(){
+        var con2 = $(this).find('.fen').val();
+        v2.push(con2);
+    });
+    var clone = $(".t1 .ss1").prop("outerHTML");
+    var w2=v2.join(",");
+   	$.get("/Authen/istaskone.html",{money:w2},function(result){
+    	$('.t1').html(clone+result);
+    },"html")
+}
+</script>
+<script>
+    $('.scontent .ditu .list li').each(function(){
+        var h = parseInt($(this).children('i.l1').css('top'))-22;
+        var l = parseInt($(this).children('i.l1').css('left'))+3;
+        var w = parseInt($(this).children('i.l1').css('<left></left>'))+3;
+        if (h>0) {
+            $(this).children('i.l2').css('height',h);
+        }else{
+            $(this).children('i.l2').css('height',-h-6);
+        }
+        if(h>0){
+            $(this).children('i.l2').css('top',22);
+        }else{
+            $(this).children('i.l2').css('top',h+30);
+        }
+        $(this).children('i.l2').css('left',l);
+        $(this).children('i.l3').css('left',l);
+        $(this).children('i.l3').css('width',-w);
+    });
+
+</script>
+<script>
+    var time="10";
+    var myChart = echarts.init(document.getElementById('china-map'));
+    var option = {
+        tooltip: {
+            show: false, //不显示提示标签
+            formatter: '{b}', //提示标签格式
+            backgroundColor:"rgba(0,0,0,.6)",//提示标签背景颜色
+            textStyle:{color:"#fff"} //提示标签字体颜色
+        },
+        series: [{
+            type: 'map',
+            mapType: 'china',
+            selectedMode : 'single',
+            mapLocation: {
+                x: 'left',
+                y: 'top',
+                height: 500,
+            },
+            label: {
+                normal: {
+                    show: true,//显示省份标签
+                    textStyle:{color:"#000",fontSize: 8,family: 'Microsoft YaHei'}//省份标签字体颜色
+                },
+                emphasis: {//对应的鼠标悬浮效果
+                    show: true,
+                    textStyle:{color:"#000"}
+                }
+            },
+            itemStyle: {
+                normal: {
+                    borderWidth: 1.2,//区域边框宽度
+                    borderColor: '#fff',//区域边框颜色
+                    areaColor:"#cfcfcf",//区域颜色
+                },
+                emphasis: {
+                    borderWidth: .5,
+                    borderColor: '#fff',
+                    areaColor:"#ebc167",
+                }
+            },
+            data:[
+                {name:'四川', selected:true}
+            ]
+        }],
+    };
+
+    myChart.setOption(option);
+    myChart.on('click', function (params) {
+        $('#mapList').children('.name').html(params.data.name+'合作单位：');
+        var dataIndex = params.dataIndex;
+        $.post("/Authen/get_province_partners.html",{id:dataIndex},function(data,status){
+        	if(status == "success"){
+        		var html = "";
+        		var length = data.length;
+        		var url = "/Authen/partner.html";
+        		url = url.replace(".html","");
+        		var url2 = "";
+        		for(var i=0;i<length;i++){
+        			url2 = url+"/id/"+data[i]['id'];
+        			html += "<a href=\""+url2+"\">"+data[i].partner_name+"</a>";
+        		}
+        		$("#partners").html(html);
+        	}
+		},'json');
+    })
+</script>
+</body>
+</html>

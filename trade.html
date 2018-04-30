@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>交易快讯_共创宇建筑设计交易平台</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="ALCHEMIST Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+<link href="css/style.css" rel='stylesheet' type='text/css' />
+<link href="css/reset.css" rel="stylesheet" type="text/css"/>
+<link href="css/public.css" rel="stylesheet" type="text/css"/>
+<link href="css/master.css" rel="stylesheet" type="text/css"/>
+<link href="css/layer.css" rel="stylesheet" type="text/css"/>
+<script src="js/jquery-1.11.0.min.js"></script>
+<link href='http://fonts.useso.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+<!--Start-smoth-scrolling-->
+		<script type="text/javascript" src="js/move-top.js"></script>
+		<script type="text/javascript" src="js/easing.js"></script>
+		<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){
+					event.preventDefault();
+					$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+				});
+			});
+		</script>
+<!--end-smoth-scrolling-->
+<!--start-top-nav-script-->
+		<script>
+			$(function() {
+				var pull 		= $('#pull');
+					menu 		= $('nav ul');
+					menuHeight	= menu.height();
+				$(pull).on('click', function(e) {
+					e.preventDefault();
+					menu.slideToggle();
+				});
+				$(window).resize(function(){
+	        		var w = $(window).width();
+	        		if(w > 320 && menu.is(':hidden')) {
+	        			menu.removeAttr('style');
+	        		}
+	    		});
+			});
+		</script>
+<!--End-top-nav-script-->
+<!--light-box-files -->
+		<script src="js/jquery.chocolat.js"></script>
+		<link rel="stylesheet" href="css/chocolat.css" type="text/css" media="screen" charset="utf-8" />
+		<!--light-box-files -->
+		<script type="text/javascript" charset="utf-8">
+		$(function() {
+			$('#example1 a').Chocolat();
+		});
+		</script>
+</head>
+<body>
+	<!--start-header-->
+	<div class="header" id="home">
+		<div class="container">
+			<div class="logo">
+				<a href="index.html"><img src="images/logo.png" alt=""></a>
+			</div>
+			<div class="quote">
+				<a href="quote.html">帮助中心</a>
+			</div>
+			<!--start-top-nav-->
+			<nav class="top-nav">
+				<ul class="top-nav">
+					<li><a href="index.html"  class="active">首页</a></li>
+					<li><a href="about.html">网站服务</a></li>
+					<li><a href="404.html">个人中心</a></li>
+					<li><a href="contact.html">联系我们</a></li>
+				</ul>
+					<a href="#" id="pull"><img src="images/menu-icon.png" title="menu" /></a>
+			</nav>
+			<div class="clearfix"> </div>
+		</div>
+	</div>
+	<!--end-header-->
+	<section class="benner">
+    <div class="slidebox">
+    	<a target="_blank" href="#"><img src="images/20180104100001_73357.jpg" alt=""></a>    </div>
+    </section>
+	<style>.childCat{display:none;}</style>
+	<section class="bid-project">
+    <div class="indexwarpper">
+        <h1>交易快讯</h1>
+        <div class="bid-type">
+        	<div class="type-list clearfix">
+                <label>分类 ：</label>
+                <div>
+                    <p>
+                        <a class="on catid-check" catid="0">全部</a>
+                        <a class="catid-check" catid="1">BIM设计类</a><a class="catid-check" catid="2">非BIM设计类</a>                    </p>
+
+                    <input type="hidden" value="0" id="catid">
+                </div>
+            </div>
+            <div class="type-list clearfix">
+                <label>地区 ：</label>
+                <div class="area">
+                    <select id="selProvinces" onchange="change_province();">
+                        <option value="0">选择省</option>
+                        <option value="2">北京</option><option value="3">安徽</option><option value="4">福建</option><option value="5">甘肃</option><option value="6">广东</option><option value="7">广西</option><option value="8">贵州</option><option value="9">海南</option><option value="10">河北</option><option value="11">河南</option><option value="12">黑龙江</option><option value="13">湖北</option><option value="14">湖南</option><option value="15">吉林</option><option value="16">江苏</option><option value="17">江西</option><option value="18">辽宁</option><option value="19">内蒙古</option><option value="20">宁夏</option><option value="21">青海</option><option value="22">山东</option><option value="23">山西</option><option value="24">陕西</option><option value="25">上海</option><option value="26">四川</option><option value="27">天津</option><option value="28">西藏</option><option value="29">新疆</option><option value="30">云南</option><option value="31">浙江</option><option value="32">重庆</option><option value="33">香港</option><option value="34">澳门</option><option value="35">台湾</option>                    </select>
+                    <select id="selCities" onchange="change_city();">
+                        <option value="0">选择市</option>
+                    </select>
+                </div>
+            </div>
+            <div class="type-list clearfix">
+                <label>价格 ：</label>
+                <div>
+                    <p>
+						<a class="on mon-check" mon="0">全部</a>
+                        <a class="mon-check" mon="1">1万以下</a><a class="mon-check" mon="2">1万～5万</a><a class="mon-check" mon="3">5万～10万</a><a class="mon-check" mon="4">10万～20万</a><a class="mon-check" mon="5">20万～50万</a><a class="mon-check" mon="6">50万以上</a>                        <input type="hidden" value="0" id="mon">
+                    </p>
+                </div>
+            </div>
+            <div class="type-list clearfix">
+                <label>周期 ：</label>
+                <div>
+                    <p>
+                    	<a class="on cyc-check" cyc="0">全部</a>
+                        <a class="cyc-check" cyc="1">1周内</a><a class="cyc-check" cyc="2">1月内</a><a class="cyc-check" cyc="3">3月内</a><a class="cyc-check" cyc="4">6月内</a><a class="cyc-check" cyc="5">1年内</a><a class="cyc-check" cyc="6">1年以上</a>                        <input type="hidden" value="0" id="cyc">
+                    </p>
+                </div>
+            </div>
+            <div class="type-list clearfix">
+                <label>搜索 ：</label>
+                <div class="ss">
+                    <input class="search" type="text" id="search" placeholder="请输入关键词">
+                    <input type="button" id="search-click" class="iconfont" value="">
+                </div>
+            </div>
+
+        </div>
+        <div class="bid-list">
+            <ul id="task_list_html">
+                <li>
+                        <h2 class="clearfix">
+                            <a class="fl" href="/Task/pay_view/id/214.html">【BIM设计类】成自泸高速某连接站棚幕墙设计<i>
+                            </i></a>
+                            <span class="fr" style="margin-right: 5%">承接方：18780226420</span>
+                        </h2>
+                        <p></p>
+                        <div class="clearfix">
+                            <span class="fr" style="margin-right: 5%">发布于：2017-10-31&nbsp;&nbsp;地点：四川</span>
+                        </div>
+                        <b class="fr" style="margin-right: 5%">交易额：￥15000.00</b>
+                    </li><li>
+                        <h2 class="clearfix">
+                            <a class="fl" href="/Task/pay_view/id/213.html">【BIM设计类】成自泸高速某连接站棚施工图设计<i>
+                            </i></a>
+                            <span class="fr" style="margin-right: 5%">承接方：z304478112</span>
+                        </h2>
+                        <p></p>
+                        <div class="clearfix">
+                            <span class="fr" style="margin-right: 5%">发布于：2017-10-31&nbsp;&nbsp;地点：四川</span>
+                        </div>
+                        <b class="fr" style="margin-right: 5%">交易额：￥4000.00</b>
+                    </li><li>
+                        <h2 class="clearfix">
+                            <a class="fl" href="/Task/pay_view/id/211.html">【BIM设计类】温江幸福田园民宿项目<i>
+                            </i></a>
+                            <span class="fr" style="margin-right: 5%">承接方：兰斯洛特J</span>
+                        </h2>
+                        <p>方案到施工图设计</p>
+                        <div class="clearfix">
+                            <span class="fr" style="margin-right: 5%">发布于：2017-10-17&nbsp;&nbsp;地点：四川</span>
+                        </div>
+                        <b class="fr" style="margin-right: 5%">交易额：￥50000.00</b>
+                    </li><li>
+                        <h2 class="clearfix">
+                            <a class="fl" href="/Task/pay_view/id/200.html">【非BIM设计类】天府六小、东林幼儿园等项目精装设计<i>
+                            </i></a>
+                            <span class="fr" style="margin-right: 5%">承接方：四川源艺恒建筑设计有限公司</span>
+                        </h2>
+                        <p>天府六小、东林幼儿园、通济桥幼儿园等三个项目精装设计，包含方案、初设、施工图设计和后期服务。请欲参加竞标的单位提交设计思路和企业简介和报价。</p>
+                        <div class="clearfix">
+                            <span class="fr" style="margin-right: 5%">发布于：2017-08-23&nbsp;&nbsp;地点：四川</span>
+                        </div>
+                        <b class="fr" style="margin-right: 5%">交易额：￥450000.00</b>
+                    </li><li>
+                        <h2 class="clearfix">
+                            <a class="fl" href="/Task/pay_view/id/198.html">【非BIM设计类】天府六小等项目的精装设计<i>
+                            </i></a>
+                            <span class="fr" style="margin-right: 5%">承接方：成都上意艺术设计有限公司</span>
+                        </h2>
+                        <p>天府六小，东林幼儿园，通济桥幼儿园等项目的精装方案设计</p>
+                        <div class="clearfix">
+                            <span class="fr" style="margin-right: 5%">发布于：2017-08-11&nbsp;&nbsp;地点：四川</span>
+                        </div>
+                        <b class="fr" style="margin-right: 5%">交易额：￥400000.00</b>
+                    </li><li>
+                        <h2 class="clearfix">
+                            <a class="fl" href="/Task/pay_view/id/195.html">【BIM设计类】天府新区科学城小游园项目<i>
+                            </i></a>
+                            <span class="fr" style="margin-right: 5%">承接方：</span>
+                        </h2>
+                        <p>天府新区科学城C区小游园景观设计项目</p>
+                        <div class="clearfix">
+                            <span class="fr" style="margin-right: 5%">发布于：2017-08-08&nbsp;&nbsp;地点：四川</span>
+                        </div>
+                        <b class="fr" style="margin-right: 5%">交易额：￥150000.00</b>
+                    </li><li>
+                        <h2 class="clearfix">
+                            <a class="fl" href="/Task/pay_view/id/194.html">【非BIM设计类】自贡富顺县外立面改造<i>
+                            </i></a>
+                            <span class="fr" style="margin-right: 5%">承接方：宋</span>
+                        </h2>
+                        <p>富顺县外立面改造项目，其中先做3栋重点整治建筑施工图设计。</p>
+                        <div class="clearfix">
+                            <span class="fr" style="margin-right: 5%">发布于：2017-08-08&nbsp;&nbsp;地点：四川</span>
+                        </div>
+                        <b class="fr" style="margin-right: 5%">交易额：￥15000.00</b>
+                    </li><li>
+                        <h2 class="clearfix">
+                            <a class="fl" href="/Task/pay_view/id/193.html">【BIM设计类】东源地产地下室BIM建模<i>
+                            </i></a>
+                            <span class="fr" style="margin-right: 5%">承接方：Ruitech</span>
+                        </h2>
+                        <p>地下室全专业BIM建模，模型精度要求达到 LOD300</p>
+                        <div class="clearfix">
+                            <span class="fr" style="margin-right: 5%">发布于：2017-08-08&nbsp;&nbsp;地点：四川</span>
+                        </div>
+                        <b class="fr" style="margin-right: 5%">交易额：￥110000.00</b>
+                    </li><li>
+                        <h2 class="clearfix">
+                            <a class="fl" href="/Task/pay_view/id/192.html">【非BIM设计类】成都天府新区麓云阁精装项目<i>
+                            </i></a>
+                            <span class="fr" style="margin-right: 5%">承接方：四川源艺恒建筑设计有限公司</span>
+                        </h2>
+                        <p>天府新区住宅精装项目，包括售楼中心、样板间、住宅公区部分。</p>
+                        <div class="clearfix">
+                            <span class="fr" style="margin-right: 5%">发布于：2017-08-08&nbsp;&nbsp;地点：四川</span>
+                        </div>
+                        <b class="fr" style="margin-right: 5%">交易额：￥450000.00</b>
+                    </li>            </ul>
+            <div id="task_pages"><div class="pagination">    </div></div>
+        </div>
+    </div>
+</section>
+<!--start-touch-->
+<div class="touch">
+	<div class="container">
+	<div class="touch-main">
+		<div class="col-md-4 touch-left">
+			<h3>联系我们</h3>
+			<p>四川省成都市武侯区四川大学望江校区</p>
+			<p>电话:15828151823</p><p>
+			</p><p>E-mail:<a href="mailto:example@email.com">396256752@qq.com</a>
+				</p>
+		</div>
+		<div class="col-md-4 touch-left">
+			<h3>@微信公众号</h3>
+			<p>打开微信就能体验共创宇建筑移动端服务了！                      立即订阅，您将第一时间了解最新资讯！</p>
+			<label>about 2 days ago</label>
+		</div>
+		<div class="col-md-4 touch-right">
+		<img src="images/2demensioncode.png" alt="">
+		</div>
+		<div class="clearfix"></div>
+	</div>
+</div>
+</div>
+<!--end-touch-->
+<!--start-footer-->
+<div class="footer">
+	<div class="container">
+		<div class="footer-text">
+			<p>关于我们 ©CO Architecture共创宇建筑设计  蜀ICP备xxxxxxxx号-1   公网安备100000000号  站长统计</p>
+			<a href="#home" class="scroll"><img src="images/top-img.png" alt=""></a>
+		</div>
+	</div>
+</div>
+<!--End-footer-->
+</body>
+</html>

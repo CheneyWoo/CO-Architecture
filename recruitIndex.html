@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>招募快讯_共创宇建筑设计交易平台</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="ALCHEMIST Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+<link href="css/style.css" rel='stylesheet' type='text/css' />
+<link href="css/reset.css" rel="stylesheet" type="text/css"/>
+<link href="css/public.css" rel="stylesheet" type="text/css"/>
+<link href="css/master.css" rel="stylesheet" type="text/css"/>
+<link href="css/layer.css" rel="stylesheet" type="text/css"/>
+<script src="js/jquery-1.11.0.min.js"></script>
+<link href='http://fonts.useso.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+<!--Start-smoth-scrolling-->
+		<script type="text/javascript" src="js/move-top.js"></script>
+		<script type="text/javascript" src="js/easing.js"></script>
+		<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){
+					event.preventDefault();
+					$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+				});
+			});
+		</script>
+<!--end-smoth-scrolling-->
+<!--start-top-nav-script-->
+		<script>
+			$(function() {
+				var pull 		= $('#pull');
+					menu 		= $('nav ul');
+					menuHeight	= menu.height();
+				$(pull).on('click', function(e) {
+					e.preventDefault();
+					menu.slideToggle();
+				});
+				$(window).resize(function(){
+	        		var w = $(window).width();
+	        		if(w > 320 && menu.is(':hidden')) {
+	        			menu.removeAttr('style');
+	        		}
+	    		});
+			});
+		</script>
+<!--End-top-nav-script-->
+<!--light-box-files -->
+		<script src="js/jquery.chocolat.js"></script>
+		<link rel="stylesheet" href="css/chocolat.css" type="text/css" media="screen" charset="utf-8" />
+		<!--light-box-files -->
+		<script type="text/javascript" charset="utf-8">
+		$(function() {
+			$('#example1 a').Chocolat();
+		});
+		</script>
+</head>
+<body>
+	<!--start-header-->
+	<div class="header" id="home">
+		<div class="container">
+			<div class="logo">
+				<a href="index.html"><img src="images/logo.png" alt=""></a>
+			</div>
+			<div class="quote">
+				<a href="quote.html">帮助中心</a>
+			</div>
+			<!--start-top-nav-->
+			<nav class="top-nav">
+				<ul class="top-nav">
+					<li><a href="index.html"  class="active">首页</a></li>
+					<li><a href="about.html">网站服务</a></li>
+					<li><a href="404.html">个人中心</a></li>
+					<li><a href="contact.html">联系我们</a></li>
+				</ul>
+					<a href="#" id="pull"><img src="images/menu-icon.png" title="menu" /></a>
+			</nav>
+			<div class="clearfix"> </div>
+		</div>
+	</div>
+	<!--end-header-->
+<link href="css/zhaomu.css" rel="stylesheet" type="text/css">
+<script>
+    $(document).ready(function(){
+        $("#login-btn").click(function () {
+            var user = checkUsername($("#username"));
+            if(!user){
+                return false;
+            }
+            var psw = checkPsw("#password");
+            if(!psw){
+                return false;
+            }
+            if(""){
+            	window.location.reload();
+            }else{
+            	window.location.href="/Index/index.html";
+            }
+
+        })
+        //用户名输入失去焦点判断
+        $("#username").blur(function () {
+            var user = checkUsername($("#username"));
+            if(!user){
+                //$(this).focus();
+            }
+        })
+        //输入密码时判断
+        $("#password").blur(function () {
+            var psw = checkPsw("#password");
+            if(!psw){
+                //$(this).focus();
+            }
+        })
+        //检测用户名
+        function checkUsername(obj){
+            var username = $(obj).val();
+            if(!username){
+                layer.tips('请输入手机号', obj);
+                return false;
+            }
+            if(username.indexOf(" ")>-1){
+                $(obj).val('');
+                layer.tips('请输入手机号', obj);
+                return false;
+            }
+            var userAjax = usernameAjax(username,obj);
+            return userAjax;
+        }
+        //调用判断用户名ajax
+        function usernameAjax(username,obj){
+            var result = false;
+            $.ajax({
+                url:"/Login/ajaxCheckUsername.html",
+                dataType:"JSON",
+                type:"POST",
+                async: false,
+                data:"username="+username,
+                success: function (res) {
+                    if(res.code == 1 || res.code == 2){
+                        layer.tips(res.message, obj);
+                        result = false;
+                    }else{
+                        result = true;
+                    }
+                }
+            })
+            return result;
+        }
+        //检测密码
+        function checkPsw(obj){
+            var password = $(obj).val();
+            var username = $("#username").val();
+            if(!password){
+                layer.tips('请输入密码', obj);
+                return false;
+            }
+            if(password.indexOf(" ")>-1){
+                $(obj).val('');
+                layer.tips('请输入密码', obj);
+                return false;
+            }
+            var pswAjax = passwordAjax(obj,username,password);
+            return pswAjax;
+        }
+        //调用判断用户名和密码是否匹配
+        function passwordAjax(obj,username,password){
+            var remember;
+            if($("#long").is(':checked')){
+                remember = 1;
+            }else{
+                remember = 0;
+            }
+            var result = false;
+            $.ajax({
+                url:"/Login/ajaxCheckPassword.html",
+                dataType:"JSON",
+                type:"POST",
+                async: false,
+                data:"username="+username+"&password="+password+"&remember="+remember,
+                success: function (res) {
+                    if(res.code == 1){
+                        layer.tips(res.message, obj);
+                        result = false;
+                    }else{
+                        result = true;
+                    }
+                }
+            })
+            return result;
+        }
+
+    });
+</script>
+<section class="benner">
+    <div class="slidebox">
+    	<a target="_blank" href="#"><img src="images/20171009031952_72949.jpg" alt=""></a>    </div>
+</section>
+<div class="info-content">
+    <h3>招募快讯</h3>
+    <div class="classify">
+        <div class="choose">
+            <h5>分类：</h5>
+            <div style="width:730px;">
+	            <span>全部</span>
+	            <span style="margin-bottom:10px;" data-val="1">BIM咨询师</span><span style="margin-bottom:10px;" data-val="2">建筑设计师</span><span style="margin-bottom:10px;" data-val="3">结构设计师</span><span style="margin-bottom:10px;" data-val="4">给排水设计师</span><span style="margin-bottom:10px;" data-val="5">电气设计师</span><span style="margin-bottom:10px;" data-val="6">暖通设计师</span><span data-val="7">景观设计师</span><span data-val="8">装饰设计师</span><span data-val="9">绿建咨询师</span><span data-val="10">其他</span>	            <input type="hidden" name="profession" id="profession" value="0">
+            </div>
+        </div>
+        <div class="area">
+            <h5>地区：</h5>
+            <div class="select">
+                <select name="province" id="province" style="opacity:1;" onchange="change_province();">
+                    <option value="0">选择省</option>
+                    <option value="2">北京</option><option value="3">安徽</option><option value="4">福建</option><option value="5">甘肃</option><option value="6">广东</option><option value="7">广西</option><option value="8">贵州</option><option value="9">海南</option><option value="10">河北</option><option value="11">河南</option><option value="12">黑龙江</option><option value="13">湖北</option><option value="14">湖南</option><option value="15">吉林</option><option value="16">江苏</option><option value="17">江西</option><option value="18">辽宁</option><option value="19">内蒙古</option><option value="20">宁夏</option><option value="21">青海</option><option value="22">山东</option><option value="23">山西</option><option value="24">陕西</option><option value="25">上海</option><option value="26">四川</option><option value="27">天津</option><option value="28">西藏</option><option value="29">新疆</option><option value="30">云南</option><option value="31">浙江</option><option value="32">重庆</option><option value="33">香港</option><option value="34">澳门</option><option value="35">台湾</option>                </select>
+            </div>
+            <div class="select">
+                <select name="city" id="city" style="opacity:1;" onchange="change_city();">
+                    <option value="0">选择市</option>
+                </select>
+            </div>
+        </div>
+        <div>
+            <h5>搜索：</h5>
+            <div class="search">
+                <input type="text" placeholder="请输入关键词" id="search">
+                <a href="javascript:rec_list_changedpage(1);"></a>
+            </div>
+        </div>
+    </div>
+    <div id="contentinfo"><a href="/Work/recruit_view/id/26.html" class="recruit"> <span class="end-time over">招募已经结束</span> <h4 class="over">（已结束）BIM咨询师3名</h4> <p class="over">111</p> <div class="other"> <span class="address over">工作地点：中国-贵州-贵阳</span> <span class="work-time over">工作时间：2018.1.11—2018.2.7</span> <span class="source">来自张凯用户  发布于：2018-01-09</span> </div> </a><a href="/Work/recruit_view/id/23.html" class="recruit"> <span class="end-time over">招募已经结束</span> <h4 class="over">（已结束）BIM咨询师2名</h4> <p class="over">青海省西宁市萨尔斯堡BIM咨询项目</p> <div class="other"> <span class="address over">工作地点：中国-青海-西宁</span> <span class="work-time over">工作时间：2017.10.31—2017.12.31</span> <span class="source">来自张凯用户  发布于：2017-10-17</span> </div> </a><a href="/Work/recruit_view/id/22.html" class="recruit"> <span class="end-time over">招募已经结束</span> <h4 class="over">（已结束）建筑设计师3名</h4> <p class="over">四川省内江市富顺县2纵5横外立面改造项目</p> <div class="other"> <span class="address over">工作地点：中国-四川-内江</span> <span class="work-time over">工作时间：2017.10.27—2017.12.30</span> <span class="source">来自张凯用户  发布于：2017-10-17</span> </div> </a><a href="/Work/recruit_view/id/21.html" class="recruit"> <span class="end-time over">招募已经结束</span> <h4 class="over">（已结束）建筑设计师2名、结构设计师2名、电气设计师1名</h4> <p class="over">成都温江院子施工图设计项目</p> <div class="other"> <span class="address over">工作地点：中国-四川-成都</span> <span class="work-time over">工作时间：2017.10.27—2017.11.30</span> <span class="source">来自张凯用户  发布于：2017-10-17</span> </div> </a><a href="/Work/recruit_view/id/20.html" class="recruit"> <span class="end-time over">招募已经结束</span> <h4 class="over">（已结束）建筑设计师2名、结构设计师2名、景观设计师1名、给排水设计师1名</h4> <p class="over">陕西西安航天城观山台项目工程设计</p> <div class="other"> <span class="address over">工作地点：中国-陕西-西安</span> <span class="work-time over">工作时间：2017.11.1—2018.2.21</span> <span class="source">来自张凯用户  发布于：2017-10-17</span> </div> </a><a href="/Work/recruit_view/id/19.html" class="recruit"> <span class="end-time over">招募已经结束</span> <h4 class="over">（已结束）现场服务1名</h4> <p class="over">西安凯德某住宅BIM咨询项目</p> <div class="other"> <span class="address over">工作地点：中国-陕西-西安</span> <span class="work-time over">工作时间：2017.10.23—2017.12.31</span> <span class="source">来自张凯用户  发布于：2017-10-16</span> </div> </a><a href="/Work/recruit_view/id/18.html" class="recruit"> <span class="end-time over">招募已经结束</span> <h4 class="over">（已结束）建筑设计师3名、结构设计师1名</h4> <p class="over">南充中联影视方案及施工图设计项目</p> <div class="other"> <span class="address over">工作地点：中国-四川-成都</span> <span class="work-time over">工作时间：2017.10.31—2017.12.31</span> <span class="source">来自张凯用户  发布于：2017-10-16</span> </div> </a><a href="/Work/recruit_view/id/17.html" class="recruit"> <span class="end-time over">招募已经结束</span> <h4 class="over">（已结束）建筑设计师4名</h4> <p class="over">西安创新港A、B、C标段的概念性方案设计项目</p> <div class="other"> <span class="address over">工作地点：中国-陕西-西安</span> <span class="work-time over">工作时间：2017.10.24—2017.11.29</span> <span class="source">来自张凯用户  发布于：2017-10-16</span> </div> </a><a href="/Work/recruit_view/id/16.html" class="recruit"> <span class="end-time over">招募已经结束</span> <h4 class="over">（已结束）造价1名</h4> <p class="over">天府新区通济桥幼儿园项目</p> <div class="other"> <span class="address over">工作地点：中国-四川-成都</span> <span class="work-time over">工作时间：2017.10.23—2017.11.29</span> <span class="source">来自张凯用户  发布于：2017-10-16</span> </div> </a><a href="/Work/recruit_view/id/15.html" class="recruit"> <span class="end-time over">招募已经结束</span> <h4 class="over">（已结束）景观设计师3名</h4> <p class="over">泸州某景观设计项目</p> <div class="other"> <span class="address over">工作地点：中国-四川-成都</span> <span class="work-time over">工作时间：2017.10.23—2017.12.28</span> <span class="source">来自张凯用户  发布于：2017-10-16</span> </div> </a></div>
+    <div class="page">
+        <div class="pagination">  <span class="active">1</span>&nbsp;<a href="javascript:rec_list_changedpage(2);">2</a>&nbsp; <a href="javascript:rec_list_changedpage(2);">下一页</a> <a href="javascript:rec_list_changedpage(2);">尾页</a>&nbsp;<span>1/2</span>&nbsp;<input type="text" id="page">&nbsp;<a href="javascript:;" class="rec_list_changedpage" id="tiaozhuan">跳页</a><script>$('#tiaozhuan').click(function(){var page = parseInt($('#page').val());if(!(/^[0-9]*$/.test(page)) || page < 1){return false;} rec_list_changedpage(page); }); </script></div>    </div>
+</div>
+<script>
+// 倒计时
+timeyi();
+function timeyi(){
+    var timeBoxs = $(".end-time");
+    for(var i=0; timeBoxs.length>i; i++){
+        var timeBox =  timeBoxs.eq(i),
+        timeInfo = timeBox.attr("data-val");
+        if(timeInfo){
+        	timeer(timeBox,timeInfo);
+        }
+    }
+}
+function timeer(atBox,atEndTime){
+    var EndTime= new Date(atEndTime);
+    var NowTime = new Date();
+    var t =EndTime.getTime() - NowTime.getTime();
+    var d=Math.floor(t/1000/60/60/24);
+    var h=Math.floor(t/1000/60/60%24);
+    var m=Math.floor(t/1000/60%60);
+    var s=Math.floor(t/1000%60);
+    atBox.html('距离招募结束还有：'+d+'天'+h+'小时'+m+'分'+s+'秒');
+    if(t<0){
+        atBox.html('招募已经结束！');
+    }
+}
+setInterval(timeyi,1000);
+</script>
+<script type="text/javascript">
+    $(".choose span").click(function(event) {
+    	$("#profession").val($(this).attr("data-val"));
+        $(this).addClass('on').siblings('span').removeClass('on');
+        rec_list_changedpage(1);
+    });
+
+    function change_province(){
+		var province = $("#province").val();
+		var postData={'region_id':province}
+		$.post("/Address/selectRegionList.html",postData,function(data,status){
+			if(status=='success'){
+				$("#city").html(data);
+				rec_list_changedpage(1);
+			}
+		},'text');
+	}
+    function change_city(){
+    	rec_list_changedpage(1);
+    }
+
+    function rec_list_changedpage(curpage){
+    	var profession = $("#profession").val();
+    	var province = $("#province").val();
+    	var city = $("#city").val();
+    	var search = $("#search").val();
+    	var collectData={p:curpage,profession:profession,province:province,city:city,search:search};
+    	$.get("/Work/ajax_recruit_info.html",collectData,function(data){
+			$(".page").html(data.page);
+			$("#contentinfo").html(data.data);
+    	},"json");
+    }
+</script>
+
+<!--start-touch-->
+<div class="touch">
+	<div class="container">
+	<div class="touch-main">
+		<div class="col-md-4 touch-left">
+			<h3>联系我们</h3>
+			<p>四川省成都市武侯区四川大学望江校区</p>
+			<p>电话:15828151823</p><p>
+			</p><p>E-mail:<a href="mailto:example@email.com">396256752@qq.com</a>
+				</p>
+		</div>
+		<div class="col-md-4 touch-left">
+			<h3>@微信公众号</h3>
+			<p>打开微信就能体验共创宇建筑移动端服务了！                      立即订阅，您将第一时间了解最新资讯！</p>
+			<label>about 2 days ago</label>
+		</div>
+		<div class="col-md-4 touch-right">
+		<img src="images/2demensioncode.png" alt="">
+		</div>
+		<div class="clearfix"></div>
+	</div>
+</div>
+</div>
+<!--end-touch-->
+<!--start-footer-->
+<div class="footer">
+	<div class="container">
+		<div class="footer-text">
+			<p>关于我们 ©CO Architecture共创宇建筑设计  蜀ICP备xxxxxxxx号-1   公网安备100000000号  站长统计</p>
+			<a href="#home" class="scroll"><img src="images/top-img.png" alt=""></a>
+		</div>
+	</div>
+</div>
+<!--End-footer-->
+</body>
+</html>

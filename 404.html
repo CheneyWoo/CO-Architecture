@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>个人中心__共创宇建筑设计平台</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="ALCHEMIST Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+<link href="css/master.css" rel='stylesheet' type='text/css' />
+<link href="css/style.css" rel='stylesheet' type='text/css' />
+<script src="js/jquery-1.11.0.min.js"></script>
+<link href='http://fonts.useso.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+<!--Start-smoth-scrolling-->
+		<script type="text/javascript" src="js/move-top.js"></script>
+		<script type="text/javascript" src="js/easing.js"></script>
+		<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){
+					event.preventDefault();
+					$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+				});
+			});
+		</script>
+<!--end-smoth-scrolling-->
+<!--start-top-nav-script-->
+		<script>
+			$(function() {
+				var pull 		= $('#pull');
+					menu 		= $('nav ul');
+					menuHeight	= menu.height();
+				$(pull).on('click', function(e) {
+					e.preventDefault();
+					menu.slideToggle();
+				});
+				$(window).resize(function(){
+	        		var w = $(window).width();
+	        		if(w > 320 && menu.is(':hidden')) {
+	        			menu.removeAttr('style');
+	        		}
+	    		});
+			});
+		</script>
+<!--End-top-nav-script-->
+</head>
+<body>
+	<!--start-header-->
+	<div class="header" id="home">
+		<div class="container">
+			<div class="logo">
+				<a href="index.html"><img src="images/logo.png" alt=""></a>
+			</div>
+			<div class="quote">
+				<a href="quote.html">帮助中心</a>
+			</div>
+			<!--start-top-nav-->
+			<nav class="top-nav">
+				<ul class="top-nav">
+					<li><a href="index.html" class="active">首页</a></li>
+					<li><a href="about.html">网站服务</a></li>
+					<li><a href="404.html">个人中心</a></li>
+					<li><a href="contact.html">联系我们</a></li>
+				</ul>
+					<a href="#" id="pull"><img src="images/menu-icon.png" title="menu"></a>
+			</nav>
+			<div class="clearfix"> </div>
+		</div>
+	</div>
+	<!--end-header-->
+	<section class="registe-conatint" style="background: url('images/registerbg.png') center;">
+    <div class="indexwarpper">
+        <div class="loginmain">
+            <div class="head clearfix">
+                <span>会员注册</span>
+                <a href="javascript:showLogin();">立即登录</a>
+            </div>
+            <div class="register">
+                <form action="/Login/registerSave.html" method="post" enctype="multipart/form-data" onsubmit="return checkForm();">
+                    <div class="fillcon">
+                        <i class="iconfont"></i>
+                        <input type="text" name="tel" id="tel" placeholder="手机号" onkeyup="this.value=this.value.replace(/[^0-9]/g,'')">
+                    </div>
+                    <div class="fillcon getcode">
+                        <i class="iconfont" style="font-size: 24px"></i>
+                        <input type="text" name="mobile_code" id="tel_code" placeholder="手机验证码">
+                        <a href="javascript:void(0)" onclick="getCode(this,60)">验证码</a>
+                    </div>
+                    <div class="fillcon ">
+                        <i class="iconfont"></i>
+                        <input type="password" name="password" id="password1" placeholder="密码">
+                    </div>
+                    <div class="fillcon">
+                        <i class="iconfont" style="font-size: 20px"></i>
+                        <input type="password" name="repassword" id="password2" placeholder="确认密码">
+                    </div>
+                    
+                    <div class="checkcon">
+                        <label class="agreement">《CO Architecture共创宇用户注册协议》</label>
+                    </div>
+                    <div class="submit">
+                        <input type="hidden" name="register_type" value="mobile">
+                        <input type="submit" value="同意协议并注册">
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+	<!--start-touch-->
+	<div class="touch">
+		<div class="container">
+		<div class="touch-main">
+			<div class="col-md-4 touch-left">
+				<h3>联系我们</h3>
+				<p>四川省成都市武侯区四川大学望江校区</p>
+				<p>电话:15828151823</p><p>
+				</p><p>E-mail:<a href="mailto:example@email.com">396256752@qq.com</a>
+					</p>
+			</div>
+			<div class="col-md-4 touch-left">
+				<h3>@微信公众号</h3>
+				<p>打开微信就能体验共创宇建筑移动端服务了！                      立即订阅，您将第一时间了解最新资讯！</p>
+				<label>about 2 days ago</label>
+			</div>
+			<div class="col-md-4 touch-right">
+			<img src="images/2demensioncode.png" alt="">
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+	</div>
+	<!--end-touch-->
+	<!--start-footer-->
+	<div class="footer">
+			<div class="container">
+				<div class="footer-text">
+					<p>关于我们 ©CO Architecture共创宇建筑设计 &nbsp;蜀ICP备xxxxxxxx号-1 &nbsp; 公网安备100000000号 &nbsp;站长统计</p>
+					<a href="#home" class="scroll"><img src="images/top-img.png" alt=""></a>
+				</div>
+			</div>
+		</div>
+	<!--End-footer-->
+</body>
+</html>
