@@ -1,0 +1,86 @@
+.banner1{width: 100%;height: 441px;background: url("../temp/banner1.png") no-repeat;background-size: cover}
+.banner1 .b-con{width: 960px;margin: 0 auto;color:#fff;padding-top: 148px}
+.b-con h3{font-size:36px;}
+.b-con p{font-size: 18px;line-height: 128px}
+.b-con img{width: 100%;height: 1px;display: block;}
+
+.content{width: 960px;overflow: hidden;margin: 50px auto;font-size: 14px;line-height: 28px;color: #000;}
+.content h4{font-size: 24px;color: #000;position: relative;height:94px;line-height:91px;text-indent: 32px;font-weight: normal;}
+.content h4 span{position: absolute;top: 36%;left: 0;margin-top:10px;width: 9px;height: 9px;border-radius: 50%;background-color: #999}
+.content img{width: 960px;display: block;}
+.content .img2{margin-top: 20px}
+.content p{font-size:14px;line-height:28px;color: #000}
+.content .h4-p2{margin: 25px 0}
+.content .pop-btn{display:block;cursor:pointer;width: 150px;height: 45px;margin-top:62px;background-color:#e9c067;color: #fff;line-height: 45px;text-align: center;font-size: 20px }
+
+/*共享办公*/
+.banner2{width: 100%;height: 424px;background: url("../temp/banner2.png") no-repeat;background-size: cover;text-align: center;line-height: 424px}
+.banner2>img{vertical-align: middle;}
+.gx-con{padding-bottom: 68px}
+.content h2{width:100%;font-size:24px;color:#000;border-bottom:1px solid #e6e6e6;line-height: 48px;margin-top: 52px}
+.content h5{font-size: 18px;color: #000;font-weight: normal;margin-bottom: 15px;margin-top: 26px}
+.content h5:nth-of-type(1){margin-top: 0}
+.content p span{margin-left: 32px;}
+.content p span:first-child{margin-left: 0;}
+.swiper-container{width: 100%;height: 298px;background-color: #fafafa;padding: 19px 20px;box-sizing: border-box;}
+.swiper-slide{width: 290px;height: 260px;background-color: #fff;padding: 0 20px;box-sizing: border-box;}
+.swiper-slide h6{font-size: 17px;color: #666;font-weight: normal;line-height: 57px;text-overflow: ellipsis; white-space: nowrap; overflow: hidden;}
+.swiper-slide img{width: 250px;height: 103px}
+.swiper-slide p{font-size: 13px;line-height: 20px;color:#686868 ;margin-top: 10px}
+.swiper-slide div{overflow: hidden; position: absolute; bottom: 15px; right: 25px;}
+.swiper-slide a{float: right;font-size: 14px;color: #999 }
+.swiper-slide a:hover{color:#eac167}
+.swiper-button-disabled{opacity: 0 !important}
+.swiper-slide .add{width: 100%;height: 100%}
+/*弹窗*/
+.pop{position: fixed;width: 100%;height: 100%;top:0;left: 0;display: none;z-index:101;}
+.pop-bg{width: 100%;height: 100%;background-color: #000;opacity: .6}
+
+.tab{width: 380px;height: 440px;background-color: #fff;position: fixed;top: 50%;margin-top:-220px;left: 50%;margin-left: -190px}
+.tab-h{width: 100%;height: 75px;border-bottom: 1px solid #e6e6e6;overflow: hidden;}
+.tab-h img{width: 139px;height: 39px;float: left;margin-left: 36px;margin-top: 10px}
+.tab-h span{float: right;width:30px;height:30px;margin-right: 10px;margin-top: 10px;background:url("../images/close1.png") no-repeat;background-size: 30px 30px;cursor:pointer;}
+.tab-con{width: 100%;padding-left: 36px;box-sizing: border-box;}
+.tab-con h3{font-size: 18px;line-height: 70px;font-weight: normal;color: #000}
+.tab-con p{font-size: 14px;color: #999}
+.tab-con input{width: 306px;border:0;border-bottom: 1px solid #ddd;height: 35px;line-height: 25px;font-size: 12px;margin-bottom: 20px;}
+.tab-con .user{margin-top: 20px}
+.tab-con #time{background: url("../images/time.png") 100% 50% no-repeat;background-size: 20px 25px}
+.tab-con .submit{display: block;width: 306px;height: 40px;border:1px solid #ccc;text-align: center;line-height: 40px;font-size: 16px;color: #000;    cursor: pointer;}
+
+.qi{width: 768px;height: 466px;background-color: #fff;position: fixed;top: 50%;margin-top:-233px;left: 50%;margin-left: -384px;padding: 0 38px 40px;box-sizing: border-box;}
+.qi-h{width: 100%;height: 92px;border-bottom: 1px solid #e6e6e6;position: relative;}
+.qi-h span{position: absolute;top:10px;right: -30px;width:30px;height:30px;background:url("../images/close1.png") no-repeat;background-size: 30px 30px; cursor: pointer;}
+.qi-h img{width: 139px;height: 39px;float: left;margin-top: 32px}
+.qi-con{margin-top: 26px;overflow: auto;width: 100%;height: 298px}
+.qi-con::-webkit-scrollbar{width:3px;}
+.qi-con::-webkit-scrollbar-track {background-color: #ddd;}
+.qi-con::-webkit-scrollbar-thumb {background-color: rgba(0, 0, 0, 0.3);}
+.qi-name{font-size: 18px;color: #585858}
+.qi-l{font-size: 14px;display: inline-block;border-left: 1px solid #e6e6e6;height: 18px;margin-left: 6px;padding-left: 6px}
+.vip{margin-left: 20px;width: 16px;height: 16px;margin-top: 6px}
+.enter{font-size:14px;color: #eac167 }
+.ope{display:inline-block;border-radius:3px;width: 51px;height: 20px;border: 1px solid #eac167;text-align: center;line-height: 22px;color: #eac167;font-size: 14px;margin-left: 18px}
+
+.phone{float: right;font-size:16px;color:#fff;border-radius:3px;margin-right: 10px;margin-top: 4px;height: 22px;padding-left:20px;padding-right:8px;background:#eac167 url("../temp/phone.png") 7px 50% no-repeat;background-size: 10px 20px;}
+.qi-con>p{font-size: 14px;color: #9c9c9c;margin-top: 15px}
+.qi-con>p span{display: block;margin-top: 10px}
+.intro{margin-top: 40px;}
+.intro h3{font-size:18px;color: #585858 ;margin-bottom: 15px;font-weight: normal;}
+.intro p{font-size: 14px;line-height: 24px;color: #9f9f9f;}
+
+.log{width: 460px;height: 620px;background-color: #fff;position: fixed;top: -100%;left: 50%;margin-left: -230px;}
+.log-dh{transition: all 1s ease;top: 50%;margin-top: -310px}
+.log-bg{width:100%;height: 26px;display: block;}
+.log-h{position: relative;width: 100%;overflow:hidden}
+.log-h img{width: 139px;height: 39px;float: left;margin-left: 56px;margin-top: 44px}
+.log-h span{position: absolute;top: 40px;right: 57px;width:30px;height:30px;background:url("../images/close1.png") no-repeat;background-size: 30px 30px;cursor:pointer;}
+.log h3{font-size: 21px;color: #454240;font-weight: normal;text-align: center;margin-top: 80px}
+.log p{font-size:14px;color: #9f9f9f;line-height: 24px;margin-top: 20px;padding:0 57px}
+.log .zhang{margin-top:130px;overflow: hidden;}
+.zhang a{float: right;width:100px;height: 22px;background-color: #d2d2d2;color: #fff;text-align: center;line-height: 22px;border-radius: 3px}
+.zhang a:last-child{margin-right: 10px}
+.zhang a:first-child{margin-right: 56px}
+
+.swiper-button-next{width:28px !important;height:53px !important;background: url("../images/right.png") center no-repeat !important;background-size: 28px 53px !important}
+.swiper-button-prev{width:28px !important;height:53px !important;background: url("../images/left.png") no-repeat !important;background-size: 28px 53px !important}
